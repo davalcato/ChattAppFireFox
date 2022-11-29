@@ -9,8 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            if #available(iOS 15.0, *) {
+                TitleRow()
+            } else {
+                // Fallback on earlier versions
+            }
+            
+        }
+        .background(Color("Peach"))
     }
 }
 
